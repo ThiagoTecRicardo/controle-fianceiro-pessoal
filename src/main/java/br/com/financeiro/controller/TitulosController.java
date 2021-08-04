@@ -43,7 +43,7 @@ public class TitulosController {
 
 		cadastroTituloService.salvar(titulo);
 		
-		attributes.addFlashAttribute("mensagem", "Cerveja salva com sucesso!");
+		attributes.addFlashAttribute("mensagem", "Titulo salvo com sucesso!");
 		
 		return  new ModelAndView("redirect:/titulos/novo");
 	}

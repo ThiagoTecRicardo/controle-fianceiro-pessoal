@@ -40,7 +40,7 @@ public class Titulo implements Serializable{
 	
 	@NotNull(message = "Digite um valor!")
 	@DecimalMin(value="0.01", message = "O valor não pode ser negativo e maior que 0,01")
-	//@NumberFormat(pattern = "#,##0.00")
+	@NumberFormat(pattern = "#,##0.00")
 	private BigDecimal valor;
 	
 	@NotNull(message = "Digite uma data de vencimento!")
@@ -48,6 +48,7 @@ public class Titulo implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date dataVencimento;
 	
+	@NotNull(message = "Selecione um status!")
 	@Enumerated(EnumType.STRING)
 	private Status status;
 	
